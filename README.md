@@ -4,6 +4,9 @@
 
 Neste projeto, enfrentamos o desafio de criar uma pipeline eficiente para extrair dados de um banco de dados inicial, transformá-los de maneira apropriada e carregá-los em um banco de dados final, culminando na impressão dos dados consolidados.
 
+## Ajustes em progresso:
+- Após alterações nos valores das colunas do banco inicial, não recebe atualizações no banco destino através do **import.py**.
+
 ## Para implementar e usar a solução, siga os seguintes passos:
 
 Configuração Inicial:
@@ -19,7 +22,10 @@ Em seguida, execute `docker-compose up` para iniciar os serviços conforme defin
 Execução dos Scripts:
 
 Os scripts Python foram desenvolvidos para serem executados manualmente.
-
+Lembrando que você precisa instalar as seguintes bibliotecas Python:
+```
+"psycopg2" & "pandas"
+```
 Abra o terminal ou uma IDE de sua escolha.
 
 Execute o script export.py para extrair os dados das tabelas do banco de dados inicial. Os dados serão salvos em arquivos CSV dentro do diretório:
@@ -30,7 +36,9 @@ Após a extração, execute o script import.py para importar os dados dos arquiv
 ```
 "/result_csv/result.csv"
 ```
+
 Resultado Final:
 
 Após a execução bem-sucedida dos scripts, um arquivo CSV final com todos os dados das tabelas estará disponível para análise.
 O projeto demonstra a habilidade de transferir dados entre bancos de dados, mantendo a organização e a integridade dos dados.
+
